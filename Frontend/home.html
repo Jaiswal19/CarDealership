@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header section  -->
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>FOUR</span>Wheels</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#vehicles">vehicles</a>
+            <a href="#featured">auction</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <!-- <div class="user-btn">
+            <div id="login-btn">
+                        <button class="btn">login</button>
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div id="signup-btn">
+                        <button class="btn">Signup</button>
+                    </div>
+        </div> -->
+        <div class="signout">
+            <div id="signout-btn">
+                <button class="btn" onclick="logout()">Sign Out</button>
+            </div>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- login form -->
+    <div class="login-form-container">
+
+        <span class="fas fa-times" id="close-login-form"></span>
+
+        <form action="/index" method="post" id="loginForm">
+            <h3>User Login</h3>
+            <input type="email" placeholder="email" class="box" required>
+            <input type="password" placeholder="password" class="box" required>
+            <input type="submit" value="login now" class="btn">
+            <p>don't have an account <a href="#">create one</a></p>
+        </form>
+    </div>
+    <!-- login form ends -->
+
+
+    <!-- signup start -->
+    <div class="signup-form-container">
+
+        <span class="fas fa-times" id="close-signup-form"></span>
+
+        <form action="/signup" method="post" id="signupForm">
+            <h3>User SignUp</h3>
+            <input type="text" placeholder="Firstname" class="box" required>
+            <input type="text" placeholder="Lastname" class="box" required>
+            <input type="email" placeholder="email" class="box" required>
+            <input type="password" placeholder="password" class="box" required>
+            <input type="submit" value="signup" class="btn">
+            <p>Already have an account? <a href="#">signin</a></p>
+        </form>
+    </div>
+    <!-- signup end -->
+
+
+
+
+
+
+
+
+<!-- home section -->
+    <section class="home" id="home">
+     <h1 class="home-parallax" data-speed="-2">Car Dealership</h1>   
+    <img class="home-parallax" data-speed="5" src="cars_data/vehicle-22.png" alt="">
+    <a href="#featured" class="btn home-parallax" data-speed="7">explore and bid cars</a>
+    </section>
+<!-- home section end -->
+
+
+<!-- vehicles section start -->
+    <section class="vehicles" id="vehicles">
+        <h1 class="heading"> All <span> vehicles</span></h1>
+
+        <div class="swiper vehicles-slider">
+            <div class="swiper-wrapper" id="swiperWrapper">
+                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+<!-- vehicles section end  -->
+
+
+
+
+ <!-- model for pop up -->
+
+ <div class="notification-bar">
+
+    <form action="#" method="post" id="pop-up">
+        <h3 id="pop-up-detail">User Already Registered</h3>
+        <div id="size">
+
+            <i class="fa-solid fa-circle-exclamation fa-4x "></i>
+        </div>
+        <div id="pop-up-close-div">
+            <button id="close-btn" class="btn">Close</button>
+        </div>
+    </form>
+
+</div>
+
+
+<!-- model end for pop up -->
+
+
+
+
+
+
+
+
+
+
+<!-- specification display section start  -->
+<div class="specifications" id="specification">
+
+    <span class="fas fa-times" id="close-specs-form"></span>
+
+    <form action="" id="signup">
+        <h3 id="carName"></h3>
+        <p id="price"></p>
+        <p id="engineCapacity"></p>
+        <p id="fuelType"></p>
+        <p id="kmsDriven"></p>
+        <p id="modelYear"></p>
+        <p id="torque"></p>
+        <p id="power"></p>
+        <p id="mileage"></p>
+    </form>
+</div>
+<!-- specification display section end  -->
+
+
+
+<!-- Auction section start -->
+    <section class="featured" id="featured">
+        <h1 class="heading"><span>Auction</span> cars</h1>
+
+        <!-- <div class="select-fil">
+            <label for="filter">Select Filter:</label>
+            <select id="filter">
+            <option value="option1">Petrol</option>
+            <option value="option2">Diesel</option>
+        Add more options ----
+        </select>
+        </div>
+         -->
+
+        <!-- price slider -->
+        <!-- <div class="price-slider"> 
+            <label for="price">Price Range:</label>
+            <input type="range" id="price" name="price" min="5000" max="500000" step="1000" value="500">
+            <p>Selected Price: $<span id="selectedPrice">500</span></p>
+
+        </div> -->
+
+
+        <div class="counttext"> This auction will end in:
+            <div class="countdown" id="countdown"></div>
+            
+        </div>
+        
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper" id="carList1">
+                
+                
+                <!-- <div class="swiper-slide box">
+                    <img src="cars_data/vehicle-2.png" alt="">
+                    <h3>new model</h3>
+                
+                    <div class="price"><span>Start Bid:</span> $55,000</div>
+                    <span class="dollar">$</span>
+                    <input type="number" class="bid-input" min="1" placeholder="place your bid amount">
+                    <a href="#" class="btn">Bid Now</a>
+                    <div id="countdown"></div>
+                </div> -->
+                
+                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper" id="carList2">
+
+                
+                <!-- <div class="swiper-slide box">
+                    <img src="cars_data/vehicle-2.png" alt="">
+                    <h3>new model</h3>
+                    
+                    <div class="price"><span>Start Bid:</span> $55,000</div>
+                    <span class="dollar">$</span>
+                    <input type="number" class="bid-btn" min="1" placeholder="place your bid amount">
+                    <a href="#" class="btn">Bid Now</a>
+                </div> -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+<!-- Auction section end -->
+
+<!-- recipt section start  -->
+<section class="receipt" id="receipt">
+    <button id="gen-receipt" class="resbtn">Generate Receipt</button>
+</section>
+<!-- recipt section ends  -->
+
+
+<!-- footer section start  -->
+<footer class="footer">
+    <h1 class="head">Our Team</h1>
+    <div class="about-us">
+        <h3 class="team">Abhishek Jaiswal</h3>
+    </div>
+    
+</footer>
+<!-- footer section end  -->
+
+
+<!-- generate receipt container start -->
+<div class="receipt-form-container">
+
+    <span class="fas fa-times" id="close-receipt-form"></span>
+
+    <form action="" method="post" id="receiptform">
+        <h3>receipt</h3>
+        <div id="receiptData">
+            <!-- dynamically fetched data from api  -->
+        </div>
+    </form>
+</div>
+<!-- generate receipt container end -->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
